@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Factorial Calculator</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="timer">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+</head>
+
+<body id="page">
+
+    <input id="myNumber" value="3">
+    <button id="defineMunber" onclick="Javascript:calculateAndShowFactorial(myNumber.value)">Calculate Factorial</button>
+    <div id="timer">
+    </div>
+    <style>
+        #timer {
+            font-size: 20px;
+            text-align: center;
+            color: #015965;
+        }
+        #page {
+            background-color: #5FC0CE;
+        }
+        input {
+            font-size: 30px;
+            width: 60px;
+            text-align: right;
+            padding: 5px;
+            background-color: #015965;
+            color: #5FC0CE;
+            font-weight: bold;
+        }
+        #defineNumber {
+            width: 120px;
+            font-size: 30px;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        function calculateAndShowFactorial(value) {
+
+            var valueNumber = Number(value);
+            if (isNaN(valueNumber)) {
+                document.getElementById("timer").innerHTML = "Введіть, будь ласка, число";
+            } else if (valueNumber % 1 === 0 & valueNumber > 0) {
+
+                for (var i = valueNumber - 1; i > 0; i--) {
+                    valueNumber *= i;
+                }
+                document.getElementById("timer").innerHTML = valueNumber;
+            } else {
+                document.getElementById("timer").innerHTML = "Введіть, будь ласка, ціле додатнє число";
+            }
+        }
+    </script>
+</body>
+
+</html>
