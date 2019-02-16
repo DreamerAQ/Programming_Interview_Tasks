@@ -44,14 +44,14 @@
             var valueNumber = Number(value);
             if (isNaN(valueNumber)) {
                 document.getElementById("timer").innerHTML = "Введіть, будь ласка, число";
-            } else if (valueNumber % 1 === 0 & valueNumber > 0) {
+            } else if (valueNumber % 1 === 0 & valueNumber > 0 & valueNumber <= 15) {
 
                 for (var i = valueNumber - 1; i > 0; i--) {
                     valueNumber *= i;
                 }
                 document.getElementById("timer").innerHTML = valueNumber;
             } else {
-                document.getElementById("timer").innerHTML = "Введіть, будь ласка, ціле додатнє число";
+                document.getElementById("timer").innerHTML = "Введіть, будь ласка, ціле додатнє число, що не перевищує 15";
             }
         }
     </script>
