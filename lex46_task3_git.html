@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <meta name="x_keywords" content="timer">
+    <meta name="x_description" content="">
+    <meta name="x_format-detection" content="telephone=no">
+</head>
+
+<body id = "page">
+<template id = "tmp">
+    <div id = "productTemplate">
+        <div class = "{NAME}"></div>
+        <img src = "{PICTURE}"/>
+        <div class = "{PRICE}"></div>
+    </div>
+</template>
+<div id="newModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+        <span class="close">&times;
+    </span>
+        <h2>Кошик</h2>
+        <div class="modal-body" id="cart">
+            <button>Оформити замовлення</button>
+            <div class="modal-footer">
+   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="timer">
+    </div>
+    <style>
+        #timer {
+            font-size: 20px;
+            text-align: center;
+            color: #015965;
+        }
+        #page {
+            background-color: #5FC0CE;
+        }
+        input {
+            font-size: 30px;
+            width: 60px;
+            text-align: right;
+            padding: 5px;
+            background-color: #015965;
+            color: #5FC0CE;
+            font-weight: bold;
+        }
+        #defineNumber {
+            width: 120px;
+            font-size: 30px;
+            padding: 5px;
+        }
+        img {
+            width:100px;
+            height:100px;
+        }
+        .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 50%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+    </style>
+    <script>
+/*function showStartTimerModalWindowOnOpenButtonClicked(){
+    var openModalButtons = document.querySelectorAll('.openModalButton');
+  for (var i=0, openModalButton; openModalButton = openModalButtons[i]; i++){
+openModalButton.onclick = function(e){
+    openModal();
+    e.stopPropagation();
+  };
+  }; 
+}
+showStartTimerModalWindowOnOpenButtonClicked();
+*/
+/*function runStartTimerOnDefineTimeInModalButtonClicked(){
+  document.getElementById('defineTimeInModal').onclick = function(e){
+     startTimer(mySecondsModal.value);
+      e.stopPropagation();
+    closeModal();
+  }
+}
+runStartTimerOnDefineTimeInModalButtonClicked();*/
+
+/*function closeModalWindowOnCloseModalSpanClicked(){
+  var closeModalSpans = document.querySelectorAll('.close');
+  for (var i=0, closeModalSpan; closeModalSpan = closeModalSpans[i]; i++){
+closeModalSpan.onclick = function(e){
+    closeModal();
+    e.stopPropagation();
+  };
+  }; 
+ }
+closeModalWindowOnCloseModalSpanClicked();
+
+function openModal() {
+  var modals = document.querySelectorAll('.modal');
+  for (var i=0, modal; modal = modals[i]; i++){
+    modal.style.display = "block"; 
+var element = document.getElementById('cart');
+element.appendChild(img);
+     }
+}
+function closeModal() {
+  var modals = document.querySelectorAll('.modal');
+  for (var i=0, modal; modal = modals[i]; i++){
+    modal.style.display = "none";  }
+   }
+*/
+   var products = [
+        {name:"Product 1", price : 1.44, picture:"/images/picture1.png"},
+        {name:"Product 2", price : 4.62, picture:"/images/picture2.png"}
+    ];
+    showAll(products, document.getElementById("productTemplate"));
+
+    function showAll(products, template){
+       
+        products.forEach(function(product){
+            show(product, template)
+        });
+    }
+    function show(product, template){
+      
+         var divs = document.getElementById("productTemplate");
+         var child = divs.firstChild;
+       console.log(child);
+       /* document.body.appendChild(newProduct);*/
+        
+        
+      
+        
+    }
+        </script>
+</body>
+
+</html>
